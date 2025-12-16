@@ -1,0 +1,8 @@
+{
+  "name": "bun-monorepo-template",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "version": "1.0.0"
+}

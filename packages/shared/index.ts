@@ -1,0 +1,1 @@
+export const sharedValue = "my-shared-value"
