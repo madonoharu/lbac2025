@@ -11,6 +11,7 @@ export default defineConfig({
       },
     }),
   ],
+  base: "/lbac2025/react/",
   build: {
     outDir: path.resolve("../../docs/react"),
   },
