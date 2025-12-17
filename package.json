@@ -1,8 +1,32 @@
 {
-  "name": "bun-monorepo-template",
+  "name": "lbac2025",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
-  "version": "1.0.0"
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "catalog": {
+      "@types/bun": "latest",
+      "es-toolkit": "latest",
+      "vite": "^8.0.0-beta.2"
+    }
+  },
+  "version": "1.0.0",
+  "module": "index.ts",
+  "type": "module",
+  "dependencies": {
+    "es-toolkit": "latest"
+  },
+  "devDependencies": {
+    "vite": "^8.0.0-beta.2",
+    "oxlint": "^1.33.0",
+    "oxlint-tsgolint": "^0.9.1",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "dev:react": "bun --cwd=./packages/react run dev",
+    "dev:svelte": "bun --cwd=./packages/svelte run dev",
+    "build": "bun --filter './packages/*' build",
+    "lint": "oxlint --type-aware"
+  }
 }
